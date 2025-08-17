@@ -1,0 +1,753 @@
+*, *:before, *:after {
+	 box-sizing: border-box;
+}
+ html {
+	 font-size: 18px;
+	 line-height: 1.5;
+	 font-weight: 300;
+	 color: #333;
+	 font-family: "Nunito Sans", sans-serif;
+}
+ body {
+	 margin: 0;
+	 padding: 0;
+	 height: 100vh;
+	 background-color: #ecf0f9;
+	 background-attachment: fixed;
+}
+.large {
+     font-size: 3rem;
+}
+ .content {
+	 display: flex;
+	 margin: 0 auto;
+	 justify-content: center;
+	 align-items: center;
+	 flex-wrap: wrap;
+	 max-width: 1500px;
+}
+ p.overview {
+	 font-size: 12px;
+	 height: 200px;
+	 width: 100%;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+}
+ .heading {
+
+	 width: 100%;
+	 margin-left: 1rem;
+	 font-weight: 900;
+	 font-size: 1.618rem;
+	 text-transform: uppercase;
+	 letter-spacing: 0.1ch;
+	 line-height: 1;
+	 padding-bottom: 0.5em;
+	 margin-bottom: 1rem;
+	 position: relative;
+}
+ .heading:after {
+	 display: block;
+	 content: '';
+	 position: absolute;
+	 width: 60px;
+	 height: 4px;
+	 background: linear-gradient(135deg, #1a9be6, #1a57e6);
+	 background: orange !important;
+	 bottom: 0;
+}
+ .description {
+	 width: 100%;
+	 margin-top: 0;
+	 margin-left: 1rem;
+	 margin-bottom: 3rem;
+}
+/* Cardurile de filme */
+.card, .card-dark {
+    color: inherit;
+    cursor: pointer;
+    width: calc(33% - 3rem);
+    min-width: calc(33% - 3rem);
+    height: 400px;
+    min-height: 400px;
+    perspective: 1000px;
+    margin: 1rem auto;
+    position: relative;
+    border-radius: 8px;
+}
+
+/* Card în dark mode */
+.card-dark {
+    background: #2c2c2c;
+    border: 1px solid #444;
+    color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 800px) {
+    .card, .card-dark {
+        width: calc(50% - 3rem);
+    }
+}
+@media screen and (max-width: 500px) {
+    .card, .card-dark {
+        width: 100%;
+    }
+}
+
+/* Fața cardului */
+.front, .front-dark, .back, .back-dark {
+    display: flex;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: ease-in-out 600ms;
+}
+.front-dark {
+    color: white;
+    background-size: cover;
+}
+.front-dark:before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+.card-dark:hover .front-dark {
+    transform: rotateY(180deg);
+}
+
+/* Spatele cardului */
+.back-dark {
+    background: #333;
+    color: white;
+    transform: rotateY(-180deg);
+    padding: 0 2em;
+}
+.card-dark:hover .back-dark {
+    transform: rotateY(0deg);
+}
+.card-dark:nth-child(even) .back-dark {
+    transform: rotateY(180deg);
+}
+.card-dark:nth-child(even):hover .back-dark {
+    transform: rotateY(0deg);
+}
+
+/* Card cu fața luminoasă și spatele întunecat */
+.card-light-dark {
+    background: #2c2c2c;  /* Fundalul rămâne dark */
+    border: 1px solid #444;
+    color: white;
+}
+
+/* Fața cardului - fără efect de întunecare */
+.front-light {
+    display: flex;
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: ease-in-out 600ms;
+}
+
+/* Spatele cardului rămâne dark */
+.back-dark {
+    background: #333;
+    color: white;
+    transform: rotateY(-180deg);
+    padding: 0 2em;
+}
+
+.card-light-dark:hover .front-light {
+    transform: rotateY(180deg);
+}
+
+.card-light-dark:hover .back-dark {
+    transform: rotateY(0deg);
+}
+
+.card-light-dark:nth-child(even) .back-dark {
+    transform: rotateY(180deg);
+}
+.card-light-dark:nth-child(even):hover .back-dark {
+    transform: rotateY(0deg);
+}
+
+
+
+
+.button-final{
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #ff9f1c, #ff7700);
+    border: none;
+    transition: 300ms ease;
+}
+
+.orange-title {
+    color: white; /* Culoare text portocaliu */
+    font-weight: bold;
+    font-size: 24px;
+    display: block; /* Elimină flexbox pentru a permite alinierea la stânga */
+    text-align: left; /* Aliniază textul la stânga */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.orange-title::after {
+    content: "";
+    position: absolute;
+    left: 0; /* Linia începe din stânga */
+    bottom: 0;
+    width: 100%; /* Linia se întinde pe toată lățimea containerului */
+    height: 3px; /* Grosimea liniei */
+    background-color: #FFA500; /* Culoarea liniei */
+}
+
+
+/* Butoane */
+.button, .button-dark {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #ff9f1c, #ff7700);
+    border: none;
+    transition: 300ms ease;
+}
+.button-dark:hover {
+    background: linear-gradient(135deg, #ff7700, #ff9f1c);
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+}
+
+/* Button Delete */
+.button-dark.delete-button {
+    background: linear-gradient(135deg, #e61a46, #c4162f);
+}
+.button-dark.delete-button:hover {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Button Add Movie */
+
+.button-add {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, yellow, orangered);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.button-add:hover {
+    background: linear-gradient(135deg, yellow, orangered);
+    transform: translateY(-2px);
+}
+
+.button-post {
+	display: inline-block;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    color:black;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, orange, yellow);
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 170, 148, 0.3);
+}
+
+.button-post:hover{
+	background: linear-gradient(135deg, yellow, orange);
+    box-shadow: 0 0 12px rgba(0, 180, 148, 0.8);
+    transform: translateY(-2px);
+}
+
+
+/* Containerul pentru popcorn */
+.popcorn-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Bucățile de popcorn */
+.popcorn {
+    position: absolute;
+    width: 30px; /* Ajustează mărimea dacă e necesar */
+    height: 30px;
+    background: url('/static/assets/img/popcorn.png') no-repeat center;
+    background-size: contain; /* Imaginea să se vadă corect */
+    opacity: 0;
+    animation: pop 0.6s ease-out forwards;
+}
+
+/* Animația popcorn-ului */
+@keyframes pop {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(var(--x), var(--y)) scale(1.2) rotate(20deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x-end), var(--y-end)) scale(0.8) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+/* Punga de popcorn - ascunsă în spatele butonului */
+.popcorn-bucket {
+    position: absolute;
+    width: 45px; /* Ajustează dimensiunea dacă e nevoie */
+    height: 55px;
+    background: url('/static/assets/img/popcorn-bucket.png') no-repeat center;
+    background-size: contain;
+    opacity: 0;
+    left: 45%; /* Poziționare exactă */
+    bottom: 30px; /* O coborâm în spatele butonului */
+    transform: scale(0.8) translateY(15px);
+    transition: opacity 0.3s ease-out, transform 0.4s ease-out;
+    pointer-events: none;
+    z-index: -1; /* Trimite punga în spatele butonului */
+}
+
+/* Când mouse-ul e pe buton, punga apare din spate */
+.button-add:hover + .popcorn-bucket {
+    opacity: 1;
+    animation: rise-up 0.3s ease-out forwards, shake 0.3s 0.3s ease-in-out forwards;
+}
+
+/* Animația de „urcare” */
+@keyframes rise-up {
+    0% {
+        transform: scale(0.8) translateY(25px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(-5px);
+        opacity: 1;
+    }
+}
+
+/* Animația de „scuturare” */
+@keyframes shake {
+    0% { transform: scale(1) translateY(-5px) rotate(0deg); }
+    25% { transform: scale(1) translateY(-5px) rotate(-5deg); }
+    50% { transform: scale(1) translateY(-5px) rotate(5deg); }
+    75% { transform: scale(1) translateY(-5px) rotate(-3deg); }
+    100% { transform: scale(1) translateY(-5px) rotate(0deg); }
+}
+
+
+
+
+
+.container.add {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.rating {
+    color: #E4BB23;
+}
+.review {
+    font-style: italic;
+}
+ .movie_gens {
+	 font-size: 11.5px;
+}
+ .title {
+	 font-weight: bold;
+}
+ .release_date {
+	 font-weight: normal;
+}
+ .text-white{
+	 color:white;!important;
+ }
+
+
+ .btn-login {
+    color: white !important;
+    border: 1px solid white !important;
+    background-color: transparent !important;
+}
+
+ .btn-signup {
+    color: black !important;
+    border: 1px solid orange !important;
+    background-color: orange !important;
+}
+
+.text-top-movies {
+    color: orange !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    display: inline-block;
+    transition: all 0.4s ease;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.6);
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Ascunde culoarea de bază */
+}
+
+.text-top-movies:hover {
+    background-position: 100%;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    animation: shine 0.8s linear forwards;
+}
+
+@keyframes shine {
+    from {
+        background-position: -100%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
+
+
+
+.movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.movies-grid .card {
+    width: calc(25% - 20px); /* 4 coloane pe desktop */
+    min-width: 200px;
+    height: 350px;
+}
+
+@media screen and (max-width: 900px) {
+    .movies-grid .card {
+        width: calc(50% - 20px); /* 2 coloane pe ecrane mici */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .movies-grid .card {
+        width: 100%; /* 1 coloană pe ecrane foarte mici */
+    }
+}
+
+.flash-messages {
+    width: 50%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.alert-danger {
+    background-color: #ff4d4d;
+    color: white;
+    border: 1px solid #ff0000;
+}
+
+
+.white-icon{
+    color:white;
+}
+
+
+
+/* Styles for the about page */
+
+/* General Container */
+/* ---------- CONTAINER ---------- */
+.container-about {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* ---------- TITLU PRINCIPAL ---------- */
+.h1-about {
+    font-size: 2.8rem;
+    margin-bottom: 65px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* ---------- CARD-URI SECTIUNI ---------- */
+.card-about {
+
+    border: 1px solid rgba(255, 165, 0, 0.2); /* Border subtil portocaliu transparent */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 25px;
+    margin-bottom: 20px;
+    height: 100%; /* Carduri egale */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- HOVER EFFECT ---------- */
+.card-about:hover {
+    background: #333333; /* Un pic mai deschis la hover */
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.15);
+}
+
+/* ---------- TITLURI SECTIUNI ---------- */
+.card-about h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 3px solid orange;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+/* ---------- ICONITE ---------- */
+.card-about h3 i {
+    margin-right: 8px;
+    color: orange;
+    font-size: 1.4rem;
+}
+
+/* ---------- TEXT SI LISTE ---------- */
+.card-about p,
+.card-about li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    color: #ddd; /* Text usor mai alb pentru contrast */
+}
+
+/* ---------- LINK-URI ---------- */
+.card-about a {
+    color: orange;
+    text-decoration: none;
+}
+
+.card-about a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .card-about {
+        padding: 20px;
+    }
+    .h1-about {
+        font-size: 2.2rem;
+
+    }
+    .card-about h3 {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* 📌 HEADER pe Desktop (≥ 992px) */
+.custom-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #222;
+    z-index: 1000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Pe desktop, meniul și butoanele rămân vizibile */
+@media (min-width: 992px) {
+    .nav {
+        display: flex !important;
+    }
+
+    .text-end {
+        display: flex !important;
+    }
+
+    .mobile-sidebar {
+        display: none !important;
+    }
+
+    .btn-login, .btn-signup {
+        display: inline-block !important;
+    }
+}
+
+/* 📌 PE MOBILE (≤ 768px) */
+@media (max-width: 768px) {
+    /* 🟢 Header-ul NU mai e sticky */
+    .custom-header {
+        position: relative;
+        padding: 10px 15px;
+    }
+
+    /* 🟢 Ascunde meniul normal */
+    .nav {
+        display: none;
+    }
+
+    /* 🟢 Butoanele Login / Sign-up pe mobil */
+    .btn-login, .btn-signup {
+        width: 100%;
+    }
+}
+
+/* 📌 BUTON ☰ MENIU MOBIL */
+#mobile-menu-button {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px; /* Mută butonul în dreapta */
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* Ascuns pe desktop */
+}
+
+@media (max-width: 768px) {
+    #mobile-menu-button {
+        display: block; /* Vizibil doar pe mobil */
+    }
+}
+
+/* 📌 SIDEBAR MOBIL */
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Inițial ascuns */
+    width: 250px;
+    height: 100%;
+    background: #333;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-sidebar.open {
+    right: 0;
+}
+
+/* 📌 Buton "X" în Sidebar */
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+/* Titlu centrat în header pe mobil */
+.mobile-title {
+    font-size: 1.6rem;  /* Mai mare */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap; /* Evită spargerea pe două linii */
+}
+
+
+/* 📌 Linkuri în Sidebar */
+.mobile-sidebar a {
+    padding: 12px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-sidebar a:hover {
+    background: #444;
+}
+
+/* 📌 Butoane Login/Signup în Sidebar */
+@media (max-width: 768px) {
+    .mobile-sidebar .btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+}@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 auto !important;
+        width: 13% !important; /* Forțăm Bootstrap să ia în considerare noua lățime */
+    }
+}
+
+.movies-grid.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.movies-grid.list-view {
+  display: flex;
+  flex-direction: column;
+  gap:1px
+}
+.movies-grid.grid-view .card-grid {
+    width: 100% ;
+    margin: 0 ;
+    max-width: 100%;
+}
+
+
+
