@@ -119,8 +119,6 @@ This project is a personal educational app built to showcase full-stack Python +
 
 If you’d like to contribute, open a pull request or reach out via:
 
-- 📧 [LinkedIn](https://www.linkedin.com/in/mircea-alexandru-rugin%C4%83-1b461b270/)
-- 💻 [GitHub](https://github.com/RuginaAlex)
 
 ---
 
@@ -128,4 +126,4 @@ If you’d like to contribute, open a pull request or reach out via:
 
 Movie data provided by [TMDB API](https://www.themoviedb.org/documentation/api)  
 Icons by [Bootstrap Icons](https://icons.getbootstrap.com/)  
-Project built by **Mircea-Alexandru Rugină**
+Project built by **Mocan Bogdan Anton Eliazar**
