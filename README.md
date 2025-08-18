@@ -31,8 +31,8 @@ Deployed with [Render](https://render.com/), this project also features user aut
 *Click any image to view it in full size.*
 
 
-| 🏠 Home Page (Not Logged In) | 🏆 Oscar & Trending Movies |
-|-----------------------------|----------------------------|
+|     🏠 Home Page (Not Logged In) |            🏆 Oscar & Trending Movies |
+|----------------------------------------|---------------------------------------|
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5497b2d7-1df2-47d9-934f-aa483ff9156f" width="500"/>
   <img src="https://github.com/user-attachments/assets/380585fa-fc90-41ff-8fae-83a7bb20fda5" width="500"/>
