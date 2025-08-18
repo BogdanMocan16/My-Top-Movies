@@ -33,7 +33,7 @@ Deployed with [Render](https://render.com/), this project also features user aut
 
 | 🏠 Home Page (Not Logged In) | 🏆 Oscar & Trending Movies |
 |-----------------------------|----------------------------|
-| ![](<img width="1919" height="925" alt="home_guest" src="https://github.com/user-attachments/assets/5497b2d7-1df2-47d9-934f-aa483ff9156f" />
+| !<img width="1919" height="925" alt="home_guest" src="https://github.com/user-attachments/assets/5497b2d7-1df2-47d9-934f-aa483ff9156f" />
 )      | ![](<img width="1912" height="922" alt="oscar_trending" src="https://github.com/user-attachments/assets/380585fa-fc90-41ff-8fae-83a7bb20fda5" />
 ) |
 
