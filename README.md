@@ -87,7 +87,7 @@ TMDB_API_KEY=your-tmdb-key
 ### 🛠 Installation
 
 ```bash
-git clone https://github.com/RuginaAlex/my-top-movies.git
+git clone https://github.com/BogdanMocan16/my-top-movies.git
 cd my-top-movies
 pip install -r requirements.txt
 python main.py
