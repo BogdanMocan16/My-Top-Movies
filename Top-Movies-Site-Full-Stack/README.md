@@ -31,17 +31,19 @@ Deployed with [Render](https://render.com/), this project also features user aut
 *Click any image to view it in full size.*
 
 
-| 🏠 Home Page (Not Logged In) | 🏆 Oscar & Trending Movies |
-|-----------------------------|----------------------------|
-| ![](presentation/ss/home_guest.png)      | ![](presentation/ss/oscar_trending.png) |
+|     🏠 Home Page (Not Logged In) |            🏆 Oscar & Trending Movies |
+|----------------------------------------|---------------------------------------|
+| ![Home Page](https://github.com/user-attachments/assets/5497b2d7-1df2-47d9-934f-aa483ff9156f) | ![Oscar](https://github.com/user-attachments/assets/380585fa-fc90-41ff-8fae-83a7bb20fda5) |
+
 
 | 🔍 Search & Add Movies       | ✅ Add to Top              |
 |-----------------------------|----------------------------|
-| ![](presentation/ss/search.png)          | ![](presentation/ss/select_movie.png)  |
+| ![Search](https://github.com/user-attachments/assets/8ddc36fa-c1e9-42fb-bb39-38ad112f79b9) | ![Add to Top](https://github.com/user-attachments/assets/bc1426b5-e6c3-40fe-b369-97cad8cc2053) |
 
 | 🎞️ Your Top Movies (List View) | 🧾 Edit Rating         |
 |--------------------------------|------------------------|
-| ![](presentation/ss/top_movies_list.png)    | ![](presentation/ss/edit.png)       |
+| ![Top Movies](https://github.com/user-attachments/assets/bf6aa512-f047-46a2-98ae-5c389874dae7) | ![Edit Rating](https://github.com/user-attachments/assets/ec04b0c0-337a-4cba-892a-e24d955fcc55) |
+
 
 ---
 ## 🎥 Demo Video
