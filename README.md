@@ -39,11 +39,15 @@ Deployed with [Render](https://render.com/), this project also features user aut
 
 | 🔍 Search & Add Movies       | ✅ Add to Top              |
 |-----------------------------|----------------------------|
-| ![](presentation/ss/search.png)          | ![](presentation/ss/select_movie.png)  |
+| ![](<img width="1901" height="925" alt="search" src="https://github.com/user-attachments/assets/8ddc36fa-c1e9-42fb-bb39-38ad112f79b9" />
+)          | ![](<img width="1900" height="923" alt="select_movie" src="https://github.com/user-attachments/assets/bc1426b5-e6c3-40fe-b369-97cad8cc2053" />
+)  |
 
 | 🎞️ Your Top Movies (List View) | 🧾 Edit Rating         |
 |--------------------------------|------------------------|
-| ![](presentation/ss/top_movies_list.png)    | ![](presentation/ss/edit.png)       |
+| ![](<img width="1909" height="921" alt="top_movies_list" src="https://github.com/user-attachments/assets/bf6aa512-f047-46a2-98ae-5c389874dae7" />
+)    | ![](<img width="1918" height="919" alt="edit" src="https://github.com/user-attachments/assets/ec04b0c0-337a-4cba-892a-e24d955fcc55" />
+)       |
 
 ---
 ## 🎥 Demo Video
